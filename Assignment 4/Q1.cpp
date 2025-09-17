@@ -22,32 +22,32 @@ public:
 
     void enqueue(int item) {
         if (isFull()) {
-            std::cout << "❌ Error: The queue is full. Cannot enqueue " << item << "." << std::endl;
+            std::cout << "Error: The queue is full. Cannot enqueue " << item << "." << std::endl;
         } else {
             data.push_back(item);
-            std::cout << "✅ Enqueued item: " << item << std::endl;
+            std::cout << "Enqueued item: " << item << std::endl;
         }
     }
 
     int dequeue() {
         if (isEmpty()) {
-            std::cout << "❌ Error: The queue is empty. Cannot dequeue." << std::endl;
+            std::cout << "Error: The queue is empty. Cannot dequeue." << std::endl;
             return -1;
         } else {
             int item = data.front();
             data.erase(data.begin());
-            std::cout << "✅ Dequeued item: " << item << std::endl;
+            std::cout << "Dequeued item: " << item << std::endl;
             return item;
         }
     }
 
     int peek() {
         if (isEmpty()) {
-            std::cout << "❌ Error: The queue is empty. No item to peek." << std::endl;
+            std::cout << "Error: The queue is empty. No item to peek." << std::endl;
             return -1;
         } else {
             int item = data.front();
-            std::cout << "✅ Peeked item: " << item << std::endl;
+            std::cout << "Peeked item: " << item << std::endl;
             return item;
         }
     }
@@ -101,14 +101,14 @@ int main() {
                 break;
             case 4:
                 if (my_queue.isEmpty()) {
-                    std::cout << "The queue is empty. 🧐" << std::endl;
+                    std::cout << "The queue is empty." << std::endl;
                 } else {
                     std::cout << "The queue is not empty. " << std::endl;
                 }
                 break;
             case 5:
                 if (my_queue.isFull()) {
-                    std::cout << "The queue is full. 😲" << std::endl;
+                    std::cout << "The queue is full." << std::endl;
                 } else {
                     std::cout << "The queue is not full. " << std::endl;
                 }
@@ -117,10 +117,10 @@ int main() {
                 my_queue.display();
                 break;
             case 7:
-                std::cout << "Exiting the program. Goodbye! 👋" << std::endl;
+                std::cout << "Exiting the program. Goodbye!" << std::endl;
                 break;
             default:
-                std::cout << "❌ Invalid choice. Please enter a number from 1 to 7." << std::endl;
+                std::cout << "Invalid choice. Please enter a number from 1 to 7." << std::endl;
                 break;
         }
     } while (choice != 7);
