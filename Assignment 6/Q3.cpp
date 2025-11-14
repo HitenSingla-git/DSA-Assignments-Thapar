@@ -34,7 +34,6 @@ void question3() {
 
     cout << "Example DLL (10 <-> 20 <-> 30): Size = " << sizeDLL(dllHead) << endl;
 
-    // Example CLL
     CLLNode* cllHead = createCLLNode(1);
     CLLNode* n2 = createCLLNode(2);
     CLLNode* n3 = createCLLNode(3);
